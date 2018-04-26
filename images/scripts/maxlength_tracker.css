@@ -1,0 +1,33 @@
+/**
+ *  Copyright 2017 Querix Ltd
+ *  Released under the MIT license.
+ *
+ *	CSS for the wrapper for counting/displaying remaining char size / characters to be entered into a textField (countDown)
+ *  Must be used with maxlength_tracker.js
+ *  4GL code to load maxlength_tracker:
+ *  CALL ui.interface.frontcall("html5","scriptImport",["qx://application/scripts/maxlength_tracker.js","nowait"],[])
+ *  CALL ui.interface.frontcall("html5","styleImport",["qx://application/scripts/maxlength_tracker.css","nowait"],[])
+ */
+.qx-aum.qx-maxlength-tracker > .tracker {
+	position: absolute;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	top: -1px;
+	right: 0;
+	font-size: .7rem;
+	font-family: monospace;
+	width: 2rem;
+	height: 1rem;
+	z-index: 1;
+	background-color: rgba(200,200,200,.7) !important;
+	opacity: .8;
+	border-radius: 0 0 .5rem .5rem;
+	border: 1px solid #aaa;
+	border-top-width: 0;
+	overflow: hidden;
+}
+
+.qx-aum.qx-maxlength-tracker.qx-has-focus > .tracker {
+	display: flex;
+}

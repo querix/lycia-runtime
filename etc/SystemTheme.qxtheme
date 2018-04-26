@@ -1,0 +1,991 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StyleSheet xmlns="http://querix.com">
+  <ElementFilter ElementName="ReportViewerConfig">
+    <StyleSheet>
+      <DoStyleAction>
+        <SetProperty>
+          <PropertyPath>
+            <PropertyName>ViewerType</PropertyName>
+          </PropertyPath>
+          <PropertyValue>TextViewer</PropertyValue>
+        </SetProperty>
+      </DoStyleAction>
+      <ElementIdFilter Identifier="print">
+        <StyleSheet>
+          <DoStyleAction>
+            <SetProperty>
+              <PropertyPath>
+                <PropertyName>ViewerType</PropertyName>
+              </PropertyPath>
+              <PropertyValue>Print</PropertyValue>
+            </SetProperty>
+          </DoStyleAction>
+        </StyleSheet>
+      </ElementIdFilter>
+    </StyleSheet>
+  </ElementFilter>
+  <DoStyleAction>
+    <SetProperty>
+      <PropertyPath>
+        <PropertyName>TitleBarOptions</PropertyName>
+      </PropertyPath>
+      <PropertyValue type="TitleBarOptions" />
+    </SetProperty>
+  </DoStyleAction>
+  <DoStyleAction>
+    <SetProperty>
+      <PropertyPath>
+        <PropertyName>EnableBorder</PropertyName>
+      </PropertyPath>
+      <PropertyValue />
+    </SetProperty>
+  </DoStyleAction>
+  <ElementFilter ElementName="FunctionFieldAbs">
+    <StyleSheet>
+      <WithClassFilter ClassName="ATTRIBUTE_INVISIBLE">
+        <StyleSheet>
+          <ChildFilter>
+            <StyleSheet>
+              <ElementFilter ElementName="TextField">
+                <StyleSheet>
+                  <DoStyleAction>
+                    <SetProperty>
+                      <PropertyPath>
+                        <PropertyName>IsPasswordMask</PropertyName>
+                      </PropertyPath>
+                      <PropertyValue />
+                    </SetProperty>
+                  </DoStyleAction>
+                </StyleSheet>
+              </ElementFilter>
+            </StyleSheet>
+          </ChildFilter>
+        </StyleSheet>
+      </WithClassFilter>
+    </StyleSheet>
+  </ElementFilter>
+  <ElementFilter ElementName="Application">
+    <StyleSheet>
+      <ChildFilter>
+        <StyleSheet>
+          <ElementFilter ElementName="StatusBar">
+            <StyleSheet>
+              <ChildFilter>
+                <StyleSheet>
+                  <ElementFilter ElementName="TemplateInstance">
+                    <StyleSheet>
+                      <DoStyleAction>
+                        <SetProperty>
+                          <PropertyPath>
+                            <PropertyName>TemplateName</PropertyName>
+                          </PropertyPath>
+                          <PropertyValue>StatusBar_Default</PropertyValue>
+                        </SetProperty>
+                      </DoStyleAction>
+                    </StyleSheet>
+                  </ElementFilter>
+                </StyleSheet>
+              </ChildFilter>
+            </StyleSheet>
+          </ElementFilter>
+        </StyleSheet>
+      </ChildFilter>
+      <DoStyleAction>
+        <SetProperty>
+          <PropertyPath>
+            <PropertyName>StartMenuShortcut</PropertyName>
+          </PropertyPath>
+          <PropertyValue>ctrl-shift-f12</PropertyValue>
+        </SetProperty>
+      </DoStyleAction>
+      <WithClassFilter ClassName="lycia_touch">
+        <StyleSheet>
+          <DoStyleAction>
+            <ApplyClass Name="ATTRIBUTE_DIM" />
+          </DoStyleAction>
+          <DescendantFilter>
+            <StyleSheet>
+              <WithPseudoClassFilter PseudoClassName="DataWidgets">
+                <StyleSheet>
+                  <DoStyleAction>
+                    <ApplyClass Name="lycia_custom_content_menu" />
+                  </DoStyleAction>
+                </StyleSheet>
+              </WithPseudoClassFilter>
+              <ElementFilter ElementName="Table">
+                <StyleSheet>
+                  <DoStyleAction>
+                    <ApplyClass Name="lycia_custom_content_menu" />
+                  </DoStyleAction>
+                </StyleSheet>
+              </ElementFilter>
+              <ElementFilter ElementName="TreeTable">
+                <StyleSheet>
+                  <DoStyleAction>
+                    <ApplyClass Name="lycia_custom_content_menu" />
+                  </DoStyleAction>
+                </StyleSheet>
+              </ElementFilter>
+            </StyleSheet>
+          </DescendantFilter>
+        </StyleSheet>
+      </WithClassFilter>
+      <WithClassFilter ClassName="lycia_desktop">
+        <StyleSheet>
+          <DescendantFilter>
+            <StyleSheet>
+              <WithPseudoClassFilter PseudoClassName="DataWidgets">
+                <StyleSheet>
+                  <DoStyleAction>
+                    <ApplyClass Name="lycia_custom_content_menu" />
+                  </DoStyleAction>
+                </StyleSheet>
+              </WithPseudoClassFilter>
+              <ElementFilter ElementName="Table">
+                <StyleSheet>
+                  <DoStyleAction>
+                    <ApplyClass Name="lycia_custom_content_menu" />
+                  </DoStyleAction>
+                </StyleSheet>
+              </ElementFilter>
+              <ElementFilter ElementName="TreeTable">
+                <StyleSheet>
+                  <DoStyleAction>
+                    <ApplyClass Name="lycia_custom_content_menu" />
+                  </DoStyleAction>
+                </StyleSheet>
+              </ElementFilter>
+            </StyleSheet>
+          </DescendantFilter>
+        </StyleSheet>
+      </WithClassFilter>
+      <WithClassFilter ClassName="lycia_mobile">
+        <StyleSheet>
+          <ChildFilter>
+            <StyleSheet>
+              <ElementFilter ElementName="Window">
+                <StyleSheet>
+                  <DoStyleAction>
+                    <SetProperty>
+                      <PropertyPath>
+                        <PropertyName>FullScreen</PropertyName>
+                      </PropertyPath>
+                      <PropertyValue />
+                    </SetProperty>
+                  </DoStyleAction>
+                </StyleSheet>
+              </ElementFilter>
+            </StyleSheet>
+          </ChildFilter>
+        </StyleSheet>
+      </WithClassFilter>
+      <DoStyleAction>
+        <SetProperty>
+          <PropertyPath>
+            <PropertyName>PreferredSize</PropertyName>
+          </PropertyPath>
+          <PropertyValue type="Size" Width="1400" Height="800" />
+        </SetProperty>
+      </DoStyleAction>
+    </StyleSheet>
+  </ElementFilter>
+  <ElementFilter ElementName="Window">
+    <StyleSheet>
+      <ElementIdFilter Identifier="SCREEN">
+        <StyleSheet>
+          <DoStyleAction>
+            <SetProperty>
+              <PropertyPath>
+                <PropertyName>FullScreen</PropertyName>
+              </PropertyPath>
+              <PropertyValue />
+            </SetProperty>
+          </DoStyleAction>
+        </StyleSheet>
+      </ElementIdFilter>
+      <WithClassFilter ClassName="no_full_screen">
+        <StyleSheet>
+          <DoStyleAction>
+            <SetProperty>
+              <PropertyPath>
+                <PropertyName>FullScreen</PropertyName>
+              </PropertyPath>
+            </SetProperty>
+          </DoStyleAction>
+        </StyleSheet>
+      </WithClassFilter>
+      <WithClassFilter ClassName="full_screen">
+        <StyleSheet>
+          <DoStyleAction>
+            <SetProperty>
+              <PropertyPath>
+                <PropertyName>FullScreen</PropertyName>
+              </PropertyPath>
+              <PropertyValue />
+            </SetProperty>
+          </DoStyleAction>
+        </StyleSheet>
+      </WithClassFilter>
+      <WithClassFilter ClassName="lines1">
+        <StyleSheet>
+          <ChildFilter>
+            <StyleSheet>
+              <ElementFilter ElementName="StatusBar">
+                <StyleSheet>
+                  <ChildFilter>
+                    <StyleSheet>
+                      <ElementFilter ElementName="TemplateInstance">
+                        <StyleSheet>
+                          <DoStyleAction>
+                            <SetProperty>
+                              <PropertyPath>
+                                <PropertyName>TemplateName</PropertyName>
+                              </PropertyPath>
+                              <PropertyValue>StatusBar_Lines1</PropertyValue>
+                            </SetProperty>
+                          </DoStyleAction>
+                        </StyleSheet>
+                      </ElementFilter>
+                    </StyleSheet>
+                  </ChildFilter>
+                </StyleSheet>
+              </ElementFilter>
+            </StyleSheet>
+          </ChildFilter>
+        </StyleSheet>
+      </WithClassFilter>
+      <WithClassFilter ClassName="lines2">
+        <StyleSheet>
+          <ChildFilter>
+            <StyleSheet>
+              <ElementFilter ElementName="StatusBar">
+                <StyleSheet>
+                  <ChildFilter>
+                    <StyleSheet>
+                      <ElementFilter ElementName="TemplateInstance">
+                        <StyleSheet>
+                          <DoStyleAction>
+                            <SetProperty>
+                              <PropertyPath>
+                                <PropertyName>TemplateName</PropertyName>
+                              </PropertyPath>
+                              <PropertyValue>StatusBar_Lines2</PropertyValue>
+                            </SetProperty>
+                          </DoStyleAction>
+                        </StyleSheet>
+                      </ElementFilter>
+                    </StyleSheet>
+                  </ChildFilter>
+                </StyleSheet>
+              </ElementFilter>
+            </StyleSheet>
+          </ChildFilter>
+        </StyleSheet>
+      </WithClassFilter>
+      <WithClassFilter ClassName="lines3">
+        <StyleSheet>
+          <ChildFilter>
+            <StyleSheet>
+              <ElementFilter ElementName="StatusBar">
+                <StyleSheet>
+                  <ChildFilter>
+                    <StyleSheet>
+                      <ElementFilter ElementName="TemplateInstance">
+                        <StyleSheet>
+                          <DoStyleAction>
+                            <SetProperty>
+                              <PropertyPath>
+                                <PropertyName>TemplateName</PropertyName>
+                              </PropertyPath>
+                              <PropertyValue>StatusBar_Lines3</PropertyValue>
+                            </SetProperty>
+                          </DoStyleAction>
+                        </StyleSheet>
+                      </ElementFilter>
+                    </StyleSheet>
+                  </ChildFilter>
+                </StyleSheet>
+              </ElementFilter>
+            </StyleSheet>
+          </ChildFilter>
+        </StyleSheet>
+      </WithClassFilter>
+      <WithClassFilter ClassName="lines4">
+        <StyleSheet>
+          <ChildFilter>
+            <StyleSheet>
+              <ElementFilter ElementName="StatusBar">
+                <StyleSheet>
+                  <ChildFilter>
+                    <StyleSheet>
+                      <ElementFilter ElementName="TemplateInstance">
+                        <StyleSheet>
+                          <DoStyleAction>
+                            <SetProperty>
+                              <PropertyPath>
+                                <PropertyName>TemplateName</PropertyName>
+                              </PropertyPath>
+                              <PropertyValue>StatusBar_Lines4</PropertyValue>
+                            </SetProperty>
+                          </DoStyleAction>
+                        </StyleSheet>
+                      </ElementFilter>
+                    </StyleSheet>
+                  </ChildFilter>
+                </StyleSheet>
+              </ElementFilter>
+            </StyleSheet>
+          </ChildFilter>
+        </StyleSheet>
+      </WithClassFilter>
+      <WithClassFilter ClassName="lines5">
+        <StyleSheet>
+          <ChildFilter>
+            <StyleSheet>
+              <ElementFilter ElementName="StatusBar">
+                <StyleSheet>
+                  <ChildFilter>
+                    <StyleSheet>
+                      <ElementFilter ElementName="TemplateInstance">
+                        <StyleSheet>
+                          <DoStyleAction>
+                            <SetProperty>
+                              <PropertyPath>
+                                <PropertyName>TemplateName</PropertyName>
+                              </PropertyPath>
+                              <PropertyValue>StatusBar_Lines5</PropertyValue>
+                            </SetProperty>
+                          </DoStyleAction>
+                        </StyleSheet>
+                      </ElementFilter>
+                    </StyleSheet>
+                  </ChildFilter>
+                </StyleSheet>
+              </ElementFilter>
+            </StyleSheet>
+          </ChildFilter>
+        </StyleSheet>
+      </WithClassFilter>
+      <WithClassFilter ClassName="lines6">
+        <StyleSheet>
+          <ChildFilter>
+            <StyleSheet>
+              <ElementFilter ElementName="StatusBar">
+                <StyleSheet>
+                  <ChildFilter>
+                    <StyleSheet>
+                      <ElementFilter ElementName="TemplateInstance">
+                        <StyleSheet>
+                          <DoStyleAction>
+                            <SetProperty>
+                              <PropertyPath>
+                                <PropertyName>TemplateName</PropertyName>
+                              </PropertyPath>
+                              <PropertyValue>StatusBar_Lines6</PropertyValue>
+                            </SetProperty>
+                          </DoStyleAction>
+                        </StyleSheet>
+                      </ElementFilter>
+                    </StyleSheet>
+                  </ChildFilter>
+                </StyleSheet>
+              </ElementFilter>
+            </StyleSheet>
+          </ChildFilter>
+        </StyleSheet>
+      </WithClassFilter>
+      <WithClassFilter ClassName="panels1">
+        <StyleSheet>
+          <ChildFilter>
+            <StyleSheet>
+              <ElementFilter ElementName="StatusBar">
+                <StyleSheet>
+                  <ChildFilter>
+                    <StyleSheet>
+                      <ElementFilter ElementName="TemplateInstance">
+                        <StyleSheet>
+                          <DoStyleAction>
+                            <SetProperty>
+                              <PropertyPath>
+                                <PropertyName>TemplateName</PropertyName>
+                              </PropertyPath>
+                              <PropertyValue>StatusBar_Panels1</PropertyValue>
+                            </SetProperty>
+                          </DoStyleAction>
+                        </StyleSheet>
+                      </ElementFilter>
+                    </StyleSheet>
+                  </ChildFilter>
+                </StyleSheet>
+              </ElementFilter>
+            </StyleSheet>
+          </ChildFilter>
+        </StyleSheet>
+      </WithClassFilter>
+      <WithClassFilter ClassName="panels2">
+        <StyleSheet>
+          <ChildFilter>
+            <StyleSheet>
+              <ElementFilter ElementName="StatusBar">
+                <StyleSheet>
+                  <ChildFilter>
+                    <StyleSheet>
+                      <ElementFilter ElementName="TemplateInstance">
+                        <StyleSheet>
+                          <DoStyleAction>
+                            <SetProperty>
+                              <PropertyPath>
+                                <PropertyName>TemplateName</PropertyName>
+                              </PropertyPath>
+                              <PropertyValue>StatusBar_Panels2</PropertyValue>
+                            </SetProperty>
+                          </DoStyleAction>
+                        </StyleSheet>
+                      </ElementFilter>
+                    </StyleSheet>
+                  </ChildFilter>
+                </StyleSheet>
+              </ElementFilter>
+            </StyleSheet>
+          </ChildFilter>
+        </StyleSheet>
+      </WithClassFilter>
+      <WithClassFilter ClassName="panels3">
+        <StyleSheet>
+          <ChildFilter>
+            <StyleSheet>
+              <ElementFilter ElementName="StatusBar">
+                <StyleSheet>
+                  <ChildFilter>
+                    <StyleSheet>
+                      <ElementFilter ElementName="TemplateInstance">
+                        <StyleSheet>
+                          <DoStyleAction>
+                            <SetProperty>
+                              <PropertyPath>
+                                <PropertyName>TemplateName</PropertyName>
+                              </PropertyPath>
+                              <PropertyValue>StatusBar_Panels3</PropertyValue>
+                            </SetProperty>
+                          </DoStyleAction>
+                        </StyleSheet>
+                      </ElementFilter>
+                    </StyleSheet>
+                  </ChildFilter>
+                </StyleSheet>
+              </ElementFilter>
+            </StyleSheet>
+          </ChildFilter>
+        </StyleSheet>
+      </WithClassFilter>
+      <WithClassFilter ClassName="panels4">
+        <StyleSheet>
+          <ChildFilter>
+            <StyleSheet>
+              <ElementFilter ElementName="StatusBar">
+                <StyleSheet>
+                  <ChildFilter>
+                    <StyleSheet>
+                      <ElementFilter ElementName="TemplateInstance">
+                        <StyleSheet>
+                          <DoStyleAction>
+                            <SetProperty>
+                              <PropertyPath>
+                                <PropertyName>TemplateName</PropertyName>
+                              </PropertyPath>
+                              <PropertyValue>StatusBar_Panels4</PropertyValue>
+                            </SetProperty>
+                          </DoStyleAction>
+                        </StyleSheet>
+                      </ElementFilter>
+                    </StyleSheet>
+                  </ChildFilter>
+                </StyleSheet>
+              </ElementFilter>
+            </StyleSheet>
+          </ChildFilter>
+        </StyleSheet>
+      </WithClassFilter>
+      <WithClassFilter ClassName="panels5">
+        <StyleSheet>
+          <ChildFilter>
+            <StyleSheet>
+              <ElementFilter ElementName="StatusBar">
+                <StyleSheet>
+                  <ChildFilter>
+                    <StyleSheet>
+                      <ElementFilter ElementName="TemplateInstance">
+                        <StyleSheet>
+                          <DoStyleAction>
+                            <SetProperty>
+                              <PropertyPath>
+                                <PropertyName>TemplateName</PropertyName>
+                              </PropertyPath>
+                              <PropertyValue>StatusBar_Panels5</PropertyValue>
+                            </SetProperty>
+                          </DoStyleAction>
+                        </StyleSheet>
+                      </ElementFilter>
+                    </StyleSheet>
+                  </ChildFilter>
+                </StyleSheet>
+              </ElementFilter>
+            </StyleSheet>
+          </ChildFilter>
+        </StyleSheet>
+      </WithClassFilter>
+      <WithClassFilter ClassName="panels6">
+        <StyleSheet>
+          <ChildFilter>
+            <StyleSheet>
+              <ElementFilter ElementName="StatusBar">
+                <StyleSheet>
+                  <ChildFilter>
+                    <StyleSheet>
+                      <ElementFilter ElementName="TemplateInstance">
+                        <StyleSheet>
+                          <DoStyleAction>
+                            <SetProperty>
+                              <PropertyPath>
+                                <PropertyName>TemplateName</PropertyName>
+                              </PropertyPath>
+                              <PropertyValue>StatusBar_Panels6</PropertyValue>
+                            </SetProperty>
+                          </DoStyleAction>
+                        </StyleSheet>
+                      </ElementFilter>
+                    </StyleSheet>
+                  </ChildFilter>
+                </StyleSheet>
+              </ElementFilter>
+            </StyleSheet>
+          </ChildFilter>
+        </StyleSheet>
+      </WithClassFilter>
+      <WithClassFilter ClassName="panels7">
+        <StyleSheet>
+          <ChildFilter>
+            <StyleSheet>
+              <ElementFilter ElementName="StatusBar">
+                <StyleSheet>
+                  <ChildFilter>
+                    <StyleSheet>
+                      <ElementFilter ElementName="TemplateInstance">
+                        <StyleSheet>
+                          <DoStyleAction>
+                            <SetProperty>
+                              <PropertyPath>
+                                <PropertyName>TemplateName</PropertyName>
+                              </PropertyPath>
+                              <PropertyValue>StatusBar_Panels7</PropertyValue>
+                            </SetProperty>
+                          </DoStyleAction>
+                        </StyleSheet>
+                      </ElementFilter>
+                    </StyleSheet>
+                  </ChildFilter>
+                </StyleSheet>
+              </ElementFilter>
+            </StyleSheet>
+          </ChildFilter>
+        </StyleSheet>
+      </WithClassFilter>
+      <WithClassFilter ClassName="none">
+        <StyleSheet>
+          <ChildFilter>
+            <StyleSheet>
+              <ElementFilter ElementName="StatusBar">
+                <StyleSheet>
+                  <ChildFilter>
+                    <StyleSheet>
+                      <ElementFilter ElementName="TemplateInstance">
+                        <StyleSheet>
+                          <DoStyleAction>
+                            <SetProperty>
+                              <PropertyPath>
+                                <PropertyName>TemplateName</PropertyName>
+                              </PropertyPath>
+                              <PropertyValue>StatusBar_None</PropertyValue>
+                            </SetProperty>
+                          </DoStyleAction>
+                        </StyleSheet>
+                      </ElementFilter>
+                    </StyleSheet>
+                  </ChildFilter>
+                </StyleSheet>
+              </ElementFilter>
+            </StyleSheet>
+          </ChildFilter>
+        </StyleSheet>
+      </WithClassFilter>
+      <ChildFilter>
+        <StyleSheet>
+          <ElementFilter ElementName="StatusBar">
+            <StyleSheet>
+              <ChildFilter>
+                <StyleSheet>
+                  <ElementFilter ElementName="TemplateInstance">
+                    <StyleSheet>
+                      <DoStyleAction>
+                        <SetProperty>
+                          <PropertyPath>
+                            <PropertyName>TemplateName</PropertyName>
+                          </PropertyPath>
+                          <PropertyValue>StatusBar_Default</PropertyValue>
+                        </SetProperty>
+                      </DoStyleAction>
+                    </StyleSheet>
+                  </ElementFilter>
+                </StyleSheet>
+              </ChildFilter>
+            </StyleSheet>
+          </ElementFilter>
+        </StyleSheet>
+      </ChildFilter>
+    </StyleSheet>
+  </ElementFilter>
+  <ElementFilter ElementName="Table">
+    <StyleSheet>
+      <DoStyleAction>
+        <SetProperty>
+          <PropertyPath>
+            <PropertyName>ImageCollapsed</PropertyName>
+          </PropertyPath>
+          <PropertyValue type="ResourceId" Uri="qx://embedded/collapsed.png" />
+        </SetProperty>
+      </DoStyleAction>
+      <DoStyleAction>
+        <SetProperty>
+          <PropertyPath>
+            <PropertyName>ImageExpanded</PropertyName>
+          </PropertyPath>
+          <PropertyValue type="ResourceId" Uri="qx://embedded/expanded.png" />
+        </SetProperty>
+      </DoStyleAction>
+      <DoStyleAction>
+        <SetProperty>
+          <PropertyPath>
+            <PropertyName>Indent</PropertyName>
+          </PropertyPath>
+          <PropertyValue>16</PropertyValue>
+        </SetProperty>
+      </DoStyleAction>
+    </StyleSheet>
+  </ElementFilter>
+  <ElementFilter ElementName="TreeTable">
+    <StyleSheet>
+      <DoStyleAction>
+        <SetProperty>
+          <PropertyPath>
+            <PropertyName>ImageCollapsed</PropertyName>
+          </PropertyPath>
+          <PropertyValue type="ResourceId" Uri="qx://embedded/collapsed.png" />
+        </SetProperty>
+      </DoStyleAction>
+      <DoStyleAction>
+        <SetProperty>
+          <PropertyPath>
+            <PropertyName>ImageExpanded</PropertyName>
+          </PropertyPath>
+          <PropertyValue type="ResourceId" Uri="qx://embedded/expanded.png" />
+        </SetProperty>
+      </DoStyleAction>
+      <DoStyleAction>
+        <SetProperty>
+          <PropertyPath>
+            <PropertyName>Indent</PropertyName>
+          </PropertyPath>
+          <PropertyValue>16</PropertyValue>
+        </SetProperty>
+      </DoStyleAction>
+    </StyleSheet>
+  </ElementFilter>
+  <ElementFilter ElementName="CoordPanel">
+    <StyleSheet>
+      <ChildFilter>
+        <StyleSheet>
+          <DoStyleAction>
+            <SetProperty>
+              <PropertyPath>
+                <PropertyName>ZOrder</PropertyName>
+              </PropertyPath>
+              <PropertyValue>1</PropertyValue>
+            </SetProperty>
+          </DoStyleAction>
+        </StyleSheet>
+      </ChildFilter>
+      <!--WithPseudoClassFilter PseudoClassName="IsProtected">
+        <StyleSheet>
+          <DoStyleAction>
+            <SetProperty>
+              <PropertyPath>
+                <PropertyName>ZOrder</PropertyName>
+              </PropertyPath>
+              <PropertyValue>2</PropertyValue>
+            </SetProperty>
+          </DoStyleAction>
+        </StyleSheet>
+      </WithPseudoClassFilter-->
+    </StyleSheet>
+  </ElementFilter>
+  <ElementFilter ElementName="TableColumn">
+    <StyleSheet>
+      <ChildFilter>
+        <StyleSheet>
+          <ElementFilter ElementName="TextField">
+            <StyleSheet>
+              <DoStyleAction>
+                <SetProperty>
+                  <PropertyPath>
+                    <PropertyName>EnableBorder</PropertyName>
+                  </PropertyPath>
+                </SetProperty>
+              </DoStyleAction>
+            </StyleSheet>
+          </ElementFilter>
+        </StyleSheet>
+      </ChildFilter>
+      <WithClassFilter ClassName="LYCIA_TreeIdColumn">
+        <StyleSheet>
+          <DoStyleAction>
+            <SetProperty>
+              <PropertyPath>
+                <PropertyName>Visible</PropertyName>
+              </PropertyPath>
+            </SetProperty>
+          </DoStyleAction>
+        </StyleSheet>
+      </WithClassFilter>
+      <WithClassFilter ClassName="LYCIA_TreeParentIdColumn">
+        <StyleSheet>
+          <DoStyleAction>
+            <SetProperty>
+              <PropertyPath>
+                <PropertyName>Visible</PropertyName>
+              </PropertyPath>
+            </SetProperty>
+          </DoStyleAction>
+        </StyleSheet>
+      </WithClassFilter>
+      <WithClassFilter ClassName="LYCIA_TreeExpandedColumn">
+        <StyleSheet>
+          <DoStyleAction>
+            <SetProperty>
+              <PropertyPath>
+                <PropertyName>Visible</PropertyName>
+              </PropertyPath>
+            </SetProperty>
+          </DoStyleAction>
+        </StyleSheet>
+      </WithClassFilter>
+      <WithClassFilter ClassName="LYCIA_TreeIsNodeColumn">
+        <StyleSheet>
+          <DoStyleAction>
+            <SetProperty>
+              <PropertyPath>
+                <PropertyName>Visible</PropertyName>
+              </PropertyPath>
+            </SetProperty>
+          </DoStyleAction>
+        </StyleSheet>
+      </WithClassFilter>
+      <WithClassFilter ClassName="LYCIA_TreeImageColumn">
+        <StyleSheet>
+          <DoStyleAction>
+            <SetProperty>
+              <PropertyPath>
+                <PropertyName>Visible</PropertyName>
+              </PropertyPath>
+            </SetProperty>
+          </DoStyleAction>
+        </StyleSheet>
+      </WithClassFilter>
+    </StyleSheet>
+  </ElementFilter>
+  <ElementFilter ElementName="ComboBox">
+    <StyleSheet>
+      <WithPseudoClassFilter PseudoClassName="Query">
+        <StyleSheet>
+          <DoStyleAction>
+            <SetProperty>
+              <PropertyPath>
+                <PropertyName>Editable</PropertyName>
+              </PropertyPath>
+              <PropertyValue />
+            </SetProperty>
+          </DoStyleAction>
+        </StyleSheet>
+      </WithPseudoClassFilter>
+    </StyleSheet>
+  </ElementFilter>
+  <WithPseudoClassFilter PseudoClassName="DataWidgets">
+    <StyleSheet>
+      <WithClassFilter ClassName="ATTRIBUTE_INVISIBLE">
+        <StyleSheet>
+          <DoStyleAction>
+            <SetProperty>
+              <PropertyPath>
+                <PropertyName>IsPasswordMask</PropertyName>
+              </PropertyPath>
+              <PropertyValue />
+            </SetProperty>
+          </DoStyleAction>
+        </StyleSheet>
+      </WithClassFilter>
+    </StyleSheet>
+  </WithPseudoClassFilter>
+  <WithPseudoClassFilter PseudoClassName="PrintableWidgets">
+    <StyleSheet>
+      <WithPseudoClassFilter PseudoClassName="Query">
+        <StyleSheet>
+          <DoStyleAction>
+            <ApplyClass Name="NO_TEXT_PICTURE" />
+          </DoStyleAction>
+        </StyleSheet>
+      </WithPseudoClassFilter>
+    </StyleSheet>
+  </WithPseudoClassFilter>
+  <ElementFilter ElementName="MenuBar">
+    <StyleSheet>
+      <WithClassFilter ClassName="tree">
+        <StyleSheet>
+          <DescendantFilter>
+            <StyleSheet>
+              <ElementFilter ElementName="MenuGroup">
+                <StyleSheet>
+                  <DoStyleAction>
+                    <SetProperty>
+                      <PropertyPath>
+                        <PropertyName>ImageId</PropertyName>
+                      </PropertyPath>
+                      <PropertyValue type="ResourceId" Uri="qx://application/TIPlus" />
+                    </SetProperty>
+                  </DoStyleAction>
+                  <WithClassFilter ClassName="expanded">
+                    <StyleSheet>
+                      <DoStyleAction>
+                        <SetProperty>
+                          <PropertyPath>
+                            <PropertyName>ImageId</PropertyName>
+                          </PropertyPath>
+                          <PropertyValue type="ResourceId" Uri="qx://application/TIMinus" />
+                        </SetProperty>
+                      </DoStyleAction>
+                    </StyleSheet>
+                  </WithClassFilter>
+                </StyleSheet>
+              </ElementFilter>
+            </StyleSheet>
+          </DescendantFilter>
+        </StyleSheet>
+      </WithClassFilter>
+      <WithClassFilter ClassName="poptree">
+        <StyleSheet>
+          <DescendantFilter>
+            <StyleSheet>
+              <ElementFilter ElementName="MenuGroup">
+                <StyleSheet>
+                  <DoStyleAction>
+                    <SetProperty>
+                      <PropertyPath>
+                        <PropertyName>ImageId</PropertyName>
+                      </PropertyPath>
+                      <PropertyValue type="ResourceId" Uri="qx://application/TIPlus" />
+                    </SetProperty>
+                  </DoStyleAction>
+                  <WithClassFilter ClassName="expanded">
+                    <StyleSheet>
+                      <DoStyleAction>
+                        <SetProperty>
+                          <PropertyPath>
+                            <PropertyName>ImageId</PropertyName>
+                          </PropertyPath>
+                          <PropertyValue type="ResourceId" Uri="qx://application/TIMinus" />
+                        </SetProperty>
+                      </DoStyleAction>
+                    </StyleSheet>
+                  </WithClassFilter>
+                </StyleSheet>
+              </ElementFilter>
+            </StyleSheet>
+          </DescendantFilter>
+        </StyleSheet>
+      </WithClassFilter>
+    </StyleSheet>
+  </ElementFilter>
+  <ElementFilter ElementName="Label">
+    <StyleSheet>
+      <WithPseudoClassFilter PseudoClassName="Prompt">
+        <StyleSheet>
+          <DoStyleAction>
+            <SetProperty>
+              <PropertyPath>
+                <PropertyName>Margin</PropertyName>
+              </PropertyPath>
+              <PropertyValue type="Thickness" Left="4" Top="0" Right="2" Bottom="0" />
+            </SetProperty>
+          </DoStyleAction>
+        </StyleSheet>
+      </WithPseudoClassFilter>
+      <WithPseudoClassFilter PseudoClassName="Error">
+        <StyleSheet>
+          <DoStyleAction>
+            <SetProperty>
+              <PropertyPath>
+                <PropertyName>Image</PropertyName>
+              </PropertyPath>
+              <PropertyValue type="Image">
+                <ImageUrl type="ResourceId" Uri="qx://embedded/error.png" />
+                <Size Width="14" Height="14" />
+              </PropertyValue>
+            </SetProperty>
+          </DoStyleAction>
+        </StyleSheet>
+      </WithPseudoClassFilter>
+    </StyleSheet>
+  </ElementFilter>
+  <WithClassFilter ClassName="STRETCH_X">
+    <StyleSheet>
+      <DoStyleAction>
+        <SetProperty>
+          <PropertyPath>
+            <PropertyName>HorizontalAlignment</PropertyName>
+          </PropertyPath>
+          <PropertyValue>Stretch</PropertyValue>
+        </SetProperty>
+      </DoStyleAction>
+    </StyleSheet>
+  </WithClassFilter>
+  <WithClassFilter ClassName="STRETCH_Y">
+    <StyleSheet>
+      <DoStyleAction>
+        <SetProperty>
+          <PropertyPath>
+            <PropertyName>VerticalAlignment</PropertyName>
+          </PropertyPath>
+          <PropertyValue>Stretch</PropertyValue>
+        </SetProperty>
+      </DoStyleAction>
+    </StyleSheet>
+  </WithClassFilter>
+  <WithClassFilter ClassName="STRETCH_BOTH">
+    <StyleSheet>
+      <DoStyleAction>
+        <SetProperty>
+          <PropertyPath>
+            <PropertyName>HorizontalAlignment</PropertyName>
+          </PropertyPath>
+          <PropertyValue>Stretch</PropertyValue>
+        </SetProperty>
+      </DoStyleAction>
+      <DoStyleAction>
+        <SetProperty>
+          <PropertyPath>
+            <PropertyName>VerticalAlignment</PropertyName>
+          </PropertyPath>
+          <PropertyValue>Stretch</PropertyValue>
+        </SetProperty>
+      </DoStyleAction>
+    </StyleSheet>
+  </WithClassFilter>
+</StyleSheet>

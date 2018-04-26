@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://namespaces.querix.com/2015/fglForms">
+	<form.actions>
+        <!--Action identifier="ident_val" text="text_val" actionImage="uri_val" comment="comment_val" accelerator1="key1_val,true(ControlModifier),true(AltModifier),true(ShiftModifier)" accelerator2="key2_val,true,true,true" accelerator3="key3_val,true,true,true" accelerator4="key4_val,true,true,true" showInContextMenu="No" statical="true" order="5" defaultView="Yes" validate="true"/-->
+		<Action identifier="expand" text="Expand" comment="Expand" accelerator1="right,false,false,false" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="collapse" text="Collapse" comment="Collapse" accelerator1="left,false,false,false" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="append" text="Append" actionImage="qx://embedded/append.png" comment="Append" accelerator1="f1,true,false,false" order="110000"/>
+		<Action identifier="insert" text="Insert" actionImage="qx://embedded/insert.png" comment="Insert" accelerator2="f1,false,false,false" order="120000"/>
+		<Action identifier="update" text="Update" actionImage="qx://embedded/update.png" comment="Update" order="100000"/>
+		<Action identifier="delete" text="Delete" actionImage="qx://embedded/delete.png" comment="Delete" accelerator2="f2,false,false,false" order="130000" validate="false"/>
+		<Action identifier="accept" text="Apply" actionImage="qx://embedded/accept.png" comment="Apply/Accept" accelerator2="esc,false,false,false" order="140000"/>
+		<Action identifier="cancel" text="Cancel" actionImage="qx://embedded/break.png" comment="Cancel" accelerator1="Interrupt,false,false,false" order="150000" validate="false"/>
+		<Action identifier="help" text="Help" actionImage="qx://embedded/help.png" comment="Help" accelerator2="w,false,true,false" order="160000" validate="false"/>
+		<Action identifier="close" text="Close" comment="Close" accelerator1="f4,false,true,false" showInContextMenu="No" defaultView="No" validate="false"/>
+		<Action identifier="next" text="Next record" actionImage="qx://embedded/nextrow.png" comment="Next record" order="30000"/>
+		<Action identifier="previous" text="Previous record" actionImage="qx://embedded/prevrow.png" comment="Previous record" order="20000"/>
+		<Action identifier="first" text="First" actionImage="qx://embedded/firstrow.png" comment="First record" order="10000"/>
+		<Action identifier="last" text="Last" actionImage="qx://embedded/lastrow.png" comment="Last record" order="40000"/>
+		<Action identifier="print" text="Print" actionImage="qx://embedded/print.png" comment="Print" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="find" text="Find" actionImage="qx://embedded/find.png" comment="Find" accelerator1="f,true,false,false" showInContextMenu="Yes"/>
+		<Action identifier="findnext" text="Find Next" actionImage="qx://embedded/findnext.png" comment="Find Next" accelerator1="g,true,false,false" showInContextMenu="Yes" defaultView="No"/>
+		<Action identifier="editcopy" text="Copy" actionImage="qx://embedded/copy.png" comment="Copy" accelerator1="c,true,false,false" showInContextMenu="Yes" defaultView="No"/>
+		<Action identifier="editcopytitle" text="Copy Title" comment="Copy Title" showInContextMenu="Yes" defaultView="No"/>
+		<Action identifier="editcut" text="Cut" actionImage="qx://embedded/cut.png" comment="Cut" accelerator1="x,true,false,false" showInContextMenu="Yes" defaultView="No"/>
+		<Action identifier="editpaste" text="Paste" actionImage="qx://embedded/paste.png" comment="Paste" accelerator1="v,true,false,false" showInContextMenu="Yes" defaultView="No"/>
+		<Action identifier="editselectall" text="Select All" comment="Select All" accelerator1="a,true,false,false" showInContextMenu="Yes" defaultView="No"/>
+		<Action identifier="nextfield" text="Next Field" comment="Next Field" accelerator1="tab,false,false,false" accelerator2="right,false,false,false" accelerator3="return,false,false,false" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="prevfield" text="Previous Field" comment="Previous Field" accelerator1="tab,false,false,true" accelerator2="left,false,false,false" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="firstrow" accelerator1="home,false,false,false" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="prevrow" accelerator1="up,false,false,false" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="nextrow" accelerator1="down,false,false,false" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="lastrow" accelerator1="end,false,false,false" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="upfield" accelerator1="up,false,false,false" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="downfield" accelerator1="down,false,false,false" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="nextpage" text="Next Page" comment="Next Page" accelerator2="pagedown,false,false,false" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="prevpage" text="Previous Page" comment="Previous Page" accelerator2="pageup,false,false,false" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="nexttab" text="Next Folder Tab" comment="Next Folder Tab" accelerator1="tab,true,false,false" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="prevtab" text="Previous Folder Tab" comment="Previous Folder Tab" accelerator1="tab,true,false,true" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="dialogtouched" showInContextMenu="No" defaultView="No" validate="false"/>
+		<Action identifier="selectnextrow" accelerator1="down,false,false,true" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="selectprevrow" accelerator1="up,false,false,true" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="highlightnextrow" accelerator1="down,true,false,false" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="highlightprevrow" accelerator1="up,true,false,false" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="selectmenu" accelerator1="space,false,false,false" accelerator2="return,false,false,false" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="nextmenu" accelerator1="right,false,false,false" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="prevmenu" accelerator1="left,false,false,false" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="copycell" text="Copy Cell" comment="Copy current cell content to clipboard" showInContextMenu="Yes" defaultView="No"/>
+		<Action identifier="copyvisiblecolumn" text="Copy Visible Column" comment="Copy visible column data to clipboard" showInContextMenu="Yes" defaultView="No"/>
+		<Action identifier="copyrow" text="Copy Row" comment="Copy current row to clipboard" showInContextMenu="Yes" defaultView="No"/>
+		<Action identifier="copyvisibletable" text="Copy Visible Table" comment=" Copy all visible rows to clipboard" showInContextMenu="Yes" defaultView="No"/>
+		<Action identifier="start_menu_id" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="on:sort" showInContextMenu="No" defaultView="No"/>
+		<Action identifier="showpoptreemenu" accelerator1="f12,true,false,true" showInContextMenu="No" defaultView="No"/>
+	</form.actions>
+</form>
+

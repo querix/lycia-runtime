@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  #%L
+  QUERIX
+  %%
+  Copyright (C) 2014 QUERIX
+  %%
+  ALL RIGTHS RESERVED.
+  50 THE AVENUE
+  SOUTHAMPTON SO17 1XQ
+  UNITED KINGDOM
+  Tel ; +(44)02380 385 180
+  Fax : +(44)02380 635 118
+  http://www.querix.com/
+  #L%
+  -->
+
+<wsauthmodules>
+  <module alias="windows">modwsauthnt</module>
+  <module alias="pam">modwsauthpam</module>
+  <module alias="shadow">modwsauthshadow</module>
+  <module alias="crypt">modwsauthcrypt</module>
+</wsauthmodules>
